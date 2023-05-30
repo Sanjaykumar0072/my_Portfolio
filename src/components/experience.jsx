@@ -18,11 +18,11 @@ const ExperienceCard = () => {
                         <li>Css</li>
                         <li>Sass</li>
                         <li>JavaScript</li>
-                        <li>Wordpress</li>
                         <li>MongoDB</li>
-                        <li>Expressjs</li>
-                        <li>vuejs</li>
                         <li>Nodejs</li>
+                        <li>Expressjs</li>
+                        <li>Wordpress</li>
+                        <li>vuejs</li>
                         <li>GgraphQl</li>
                         <li>Github</li>
                     </ul>

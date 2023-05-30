@@ -223,7 +223,7 @@ nav .nav-link {
 }
 .myAvtar {
   justify-content: center !important;
-  padding-top: 12em !important;
+  padding-top: 15em !important;
 }
 .home-content {
   color: whitesmoke;
@@ -392,6 +392,8 @@ nav .nav-link {
 }
 .experience-content p {
   font-size: 20px;
+  max-width: 450px;
+  margin: 10px auto;
 }
 .experience-content img {
   width: 100px;
@@ -616,8 +618,7 @@ nav .nav-link {
     padding: 70px 0;
   }
   .myAvtar {
-    padding-top: 0 !important;
-    padding-bottom: 2em !important;
+    padding: 0 !important;
   }
   .myAvtar .img-fluid {
     transform: translateX(50%) !important;

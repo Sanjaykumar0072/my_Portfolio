@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import NavBar from './components/header';
 import Section1 from './components/section/banner';
 import Resume from './components/resume/resumeNew';
-import ScrollToTop from './components/scroll';
 import Footer from './components/footer';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -25,7 +24,6 @@ function App() {
     <Router>
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <NavBar />
-        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Section1 />} />
           {/* <Route path="/project" element={<Projects />} />

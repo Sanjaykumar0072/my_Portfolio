@@ -18,8 +18,7 @@ function AboutMe() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I started learning programming and I have learnt
-              something, I think… 🤷‍♂️
+              I started learning programming and I have learnt tech to develop websites.
               <br />
               <br />I had worked in technologies
               <i>
