@@ -4,7 +4,7 @@ import Type from "./type";
 import banner from '../../assets/section-banner.png';
 import AboutMe from './aboutme';
 import Skills from "./skills";
-import FindMe from "./findMe";
+import FindMe from "./findme";
 import Experience from "../experience";
 
 function Section1() {
