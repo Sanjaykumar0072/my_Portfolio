@@ -72,7 +72,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
             <div className="theme" onClick={() => darkMode === false ? setDarkMode(true) : setDarkMode(false)}>
-              <img src={darkMode === false ? '../../src/assets/images/sun.svg' : '../../src/assets/images/moon.svg'} />
+              <img src={darkMode === false ? '/assets/images/sun.svg' : '/assets/images/moon.svg'} />
             </div>
           </Nav>
         </Navbar.Collapse>
