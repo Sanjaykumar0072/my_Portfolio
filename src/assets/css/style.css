@@ -46,15 +46,43 @@ body {
 .dark-mode svg path {
   fill: var(--imp-dark-text-color);
 }
+.dark-mode .navbar .nav-brand {
+  margin: 0;
+}
 .dark-mode .navbar .nav-item a::after {
   background: var(--imp-dark-text-color);
 }
+.dark-mode .navbar .navbar-toggler span {
+  background-color: var(--imp-dark-text-color);
+}
 .dark-mode .skills .tech-icons {
-  border: 1.7px solid rgba(200, 137, 230, 0.637);
-  box-shadow: 4px 5px 4px 3px rgb(16, 30, 60);
+  border: 1.7px solid var(--imp-dark-text-color);
+  box-shadow: 4px 4px 4px 0px rgba(45, 212, 191, 0.52);
+}
+.dark-mode .experience-conatiner .experience-content {
+  border: 1.7px solid var(--imp-dark-text-color);
+  box-shadow: 4px 4px 4px 0px rgba(45, 212, 191, 0.52);
+}
+.dark-mode .experience-conatiner .experience-content ul li {
+  border: 1.7px solid var(--imp-dark-text-color);
+  box-shadow: 4px 4px 4px 0px rgba(45, 212, 191, 0.52);
 }
 .dark-mode .experience-conatiner .experience-content img {
   background-color: var(--imp-dark-text-color);
+}
+.dark-mode .experience-conatiner .experience-content h3 {
+  color: var(--imp-dark-text-color);
+}
+.dark-mode .link-section .social-content ul li .social-icons:before {
+  background: var(--imp-dark-text-color);
+}
+.dark-mode .link-section .social-content ul li .social-icons:hover:before {
+  box-shadow: 0 0 15px var(--imp-dark-text-color);
+}
+.dark-mode .link-section .social-content ul li .social-icons:hover {
+  color: var(--imp-dark-text-color);
+  box-shadow: 0 0 5px var(--imp-dark-text-color);
+  text-shadow: 0 0 2px var(--imp-dark-text-color);
 }
 .dark-mode .scroll {
   background-color: var(--imp-dark-text-color);
@@ -326,7 +354,8 @@ section,
   text-align: center;
   border-radius: 5px;
   display: table;
-  box-shadow: 0px 0px 3px 6px rgba(89, 4, 168, 0.137);
+  border: 1.7px solid var(--imp-text-color);
+  box-shadow: 4px 4px 4px 0px rgba(145, 45, 9, 0.4588235294);
   overflow: hidden;
   transition: all 0.4s ease 0s;
 }
@@ -352,27 +381,28 @@ section,
   text-align: center;
   border-radius: 5px;
   display: table;
-  border: 1.7px solid rgba(200, 137, 230, 0.637);
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  border: 1.7px solid var(--imp-text-color);
+  box-shadow: 4px 4px 4px 0px rgba(145, 45, 9, 0.4588235294);
   overflow: hidden;
   transition: all 0.4s ease 0s;
   color: #fff;
   width: 100%;
   max-width: 500px;
 }
-.experience-conatiner .experience-content h2 {
-  color: #fff;
-}
 .experience-conatiner .experience-content p {
   font-size: 20px;
   max-width: 450px;
   margin: 10px auto;
+}
+.experience-conatiner .experience-content h3 {
+  color: var(--imp-text-color);
 }
 .experience-conatiner .experience-content img {
   width: 100px;
   border-radius: 50%;
   background-color: var(--imp-text-color);
   padding: 5px;
+  margin-bottom: 10px;
 }
 .experience-conatiner .experience-content ul {
   display: flex;
@@ -385,8 +415,8 @@ section,
 .experience-conatiner .experience-content ul li {
   list-style: none;
   font-size: 20px;
-  border: 1px solid rgba(200, 137, 230, 0.637);
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  border: 1.7px solid var(--imp-text-color);
+  box-shadow: 4px 4px 4px 0px rgba(145, 45, 9, 0.4588235294);
   border-radius: 5px;
   padding: 5px 25px;
 }
@@ -430,19 +460,19 @@ section,
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #68187a;
+  background: var(--imp-text-color);
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
 }
 .link-section .social-content ul li .social-icons:hover:before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px var(--imp-text-color);
 }
 .link-section .social-content ul li .social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: var(--imp-text-color);
+  box-shadow: 0 0 5px var(--imp-text-color);
+  text-shadow: 0 0 2px var(--imp-text-color);
 }
 
 /*-------------------footer-------------------*/
@@ -454,34 +484,18 @@ section,
   padding-bottom: 8px;
 }
 .footer .footer-copywright {
-  text-align: left;
-  padding-left: 150px;
+  text-align: center;
+  padding: 0;
+  width: 100%;
 }
 .footer .footer-copywright h3 {
   font-size: 1em;
   color: white;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
-.footer ul {
-  margin: 0;
-}
-.footer ul li {
-  display: inline-block;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.footer ul li .social-icons {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 2em;
-  background: rgba(255, 255, 255, 0.972);
-  color: var(--imp-text-color);
-  border-radius: 50%;
+.footer .footer-copywright h3 span {
+  color: #000;
+  font-weight: 700;
 }
 
 /*-------------------resume-------------------*/
@@ -511,7 +525,7 @@ section,
   position: fixed;
   z-index: 3;
   display: none;
-  bottom: 10px;
+  bottom: 60px;
   right: 2%;
   width: 50px;
   height: 50px;
@@ -534,6 +548,65 @@ section,
 }
 
 /*-------------------Responsive-------------------*/
+@media (max-width: 1199px) {
+  .home-content .home-header .Typewriter__wrapper {
+    font-size: 1.8em;
+  }
+  .home-about-section .sec2-column {
+    align-items: center;
+  }
+  .home-about-section .sec2-column .myAvtar {
+    padding: 0;
+  }
+  .skills .tech-icons {
+    width: 12rem;
+  }
+  .experience-conatiner .experience-content {
+    max-width: 85%;
+  }
+  .experience-conatiner .experience-content p {
+    max-width: 90%;
+  }
+  .experience-conatiner .experience-content ul li {
+    padding: 5px 20px;
+  }
+}
+@media (max-width: 1023px) {
+  section {
+    padding-top: 80px;
+  }
+  .navbar .theme:hover::after {
+    opacity: 0;
+  }
+  .home-content {
+    padding-bottom: 50px;
+  }
+  .home-content .home-header .Typewriter__wrapper {
+    font-size: 20px;
+  }
+  .home-about-section {
+    padding-bottom: 0;
+  }
+  .home-about-section .sec2-column {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-about-section .home-about-description {
+    padding-top: 40px;
+    width: 100%;
+  }
+  .home-about-section .home-about-description .home-about-body {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .home-about-section .myAvtar {
+    padding: 0;
+  }
+  .home-about-section .myAvtar .img-fluid {
+    transform: translateX(50%);
+    width: 50%;
+  }
+}
 @media (max-width: 767px) {
   section {
     padding-top: 0;
@@ -544,13 +617,20 @@ section,
   .navbar {
     padding: 5px 10px;
     font-size: 20px !important;
-    background-color: #00abff;
   }
   .navbar .nav-item a {
     padding: 0.7rem 1rem !important;
   }
   .navbar .nav-item a::after {
     display: none;
+  }
+  .navbar .theme {
+    position: absolute;
+    right: 5rem;
+    top: 8px;
+  }
+  .navbar .theme:hover::after {
+    opacity: 0;
   }
   .home-content .img-fluid {
     padding-top: 10px;
@@ -559,33 +639,14 @@ section,
     font-size: 25px;
     padding-top: 0;
   }
-  .home-content .home-header .heading-name .Typewriter {
+  .home-content .home-header .Typewriter {
     padding-top: 0;
+  }
+  .home-content .home-header .Typewriter__wrapper {
     font-size: 20px;
   }
-  .home-content .home-header .heading-name .Typewriter__wrapper {
-    font-size: 1.4em;
-    font-weight: 500;
-    position: absolute;
-  }
-  .home-content .home-header .heading-name .Typewriter__cursor {
+  .home-content .home-header .Typewriter__cursor {
     display: none;
-  }
-  .home-about-section {
-    padding-bottom: 0;
-  }
-  .home-about-section .home-about-description {
-    padding-top: 40px;
-  }
-  .home-about-section .home-about-description .home-about-body {
-    font-size: 18px;
-  }
-  .home-about-section .myAvtar {
-    padding: 0;
-  }
-  .home-about-section .myAvtar .img-fluid {
-    transform: translateX(50%);
-    width: 50%;
   }
   .home-about-social {
     padding: 70px 0;
@@ -601,9 +662,6 @@ section,
   .experience-conatiner h1 {
     padding-bottom: 0;
   }
-  .experience-conatiner .experience-content {
-    max-width: 280px;
-  }
   .experience-conatiner .experience-content img {
     width: 75px;
   }
@@ -613,12 +671,13 @@ section,
   .experience-conatiner .experience-content ul li,
   .experience-conatiner .experience-content p {
     font-size: 18px;
+    padding: 5px 10px;
   }
   .link-section .social-content {
     padding: 50px 0;
   }
-  .footer .footer-copywright {
-    padding-left: 10px;
+  .link-section .social-content ul {
+    padding: 0 0 15px;
   }
   .resume-section {
     padding-top: 70px;

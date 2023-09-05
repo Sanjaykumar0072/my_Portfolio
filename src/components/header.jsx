@@ -73,11 +73,11 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
-            <div className="theme" onClick={() => darkMode === false ? setDarkMode(true) : setDarkMode(false)}>
-              <img src={darkMode === false ? sun : moon} />
-            </div>
           </Nav>
         </Navbar.Collapse>
+        <div className="theme" onClick={() => darkMode === false ? setDarkMode(true) : setDarkMode(false)}>
+          <img src={darkMode === false ? sun : moon} />
+        </div>
       </Container>
     </Navbar>
   );

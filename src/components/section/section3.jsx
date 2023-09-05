@@ -11,7 +11,7 @@ const ExperienceCard = () => {
                     <img src={blocksera} />
                     <h3>Blocksera Technologies</h3>
                     <h4>Software Associate</h4>
-                    <p>July 2022 - April 2023</p>
+                    <p>April 2022 - April 2023</p>
                     <p>I Worked as a front-end and back-end developer to design web based applications for websites.</p>
                     <ul>
                         <li>Html</li>
@@ -23,7 +23,8 @@ const ExperienceCard = () => {
                         <li>Nodejs</li>
                         <li>Expressjs</li>
                         <li>Wordpress</li>
-                        <li>vuejs</li>
+                        <li>Reactjs</li>
+                        <li>Vuejs</li>
                         <li>GgraphQl</li>
                         <li>Github</li>
                     </ul>

@@ -5,6 +5,9 @@ import pdf from "../../assets/sanjaykumar_resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import NavBar from "../header";
+import FindMe from "../section/section4";
+import Footer from "../footer";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
@@ -16,6 +19,7 @@ function ResumeNew() {
 
   return (
     <div>
+      <NavBar />
       <Container fluid className="resume-section">
         <Row className="resume">
           <Document file={pdf} className="d-flex justify-content-center">
@@ -35,6 +39,8 @@ function ResumeNew() {
           </Button>
         </Row>
       </Container>
+      <FindMe />
+      <Footer />
     </div>
   );
 }
