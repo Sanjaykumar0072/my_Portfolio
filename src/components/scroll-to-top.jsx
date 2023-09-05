@@ -1,4 +1,5 @@
 import React,  { useRef, useEffect } from 'react';
+import arrow from '/src/assets/images/up-arrow-icon.svg';
 
 const ScrollToTop = () => {
   const scrollTopRef = useRef(null);
@@ -33,7 +34,7 @@ const ScrollToTop = () => {
           ref={scrollTopRef}
           onClick={scrollToTop}
           className="scroll"
-        ><img src="/src/assets/images/up-arrow-icon.svg" alt="" /></span>
+        ><img src={arrow} alt="" /></span>
       </>
     )    
 }

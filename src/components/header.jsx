@@ -6,12 +6,8 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
+import logo from '/src/assets/images/sanjaylogo.png';
+import { AiOutlineHome } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
 
@@ -51,7 +47,7 @@ function NavBar() {
       className="navbar"
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex"><img className="logo" src="/src/assets/images/sanjaylogo.png" alt="" /></Navbar.Brand>
+        <Navbar.Brand href="/" className="d-flex"><img className="logo" src={logo} alt="" /></Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -76,7 +72,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
             <div className="theme" onClick={() => darkMode === false ? setDarkMode(true) : setDarkMode(false)}>
-              <img src={darkMode === false ? '/src/assets/images/sun.svg' : '/src/assets/images/moon.svg'} />
+              <img src={darkMode === false ? '../../src/assets/images/sun.svg' : '../../src/assets/images/moon.svg'} />
             </div>
           </Nav>
         </Navbar.Collapse>
