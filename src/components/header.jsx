@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import logo from '/src/assets/images/sanjaylogo.png';
+import sun from '/src/assets/images/sun.svg';
+import moon from '/src/assets/images/moon.svg';
 import { AiOutlineHome } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -72,7 +74,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
             <div className="theme" onClick={() => darkMode === false ? setDarkMode(true) : setDarkMode(false)}>
-              <img src={darkMode === false ? '/assets/images/sun.svg' : '/assets/images/moon.svg'} />
+              <img src={darkMode === false ? sun : moon} />
             </div>
           </Nav>
         </Navbar.Collapse>
