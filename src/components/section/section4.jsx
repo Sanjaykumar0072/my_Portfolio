@@ -5,32 +5,32 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function FindMe() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid className="link-section" id="about">
       <Container>
         <Row>
-          <Col md={12} className="home-about-social">
+          <Col md={12} className="social-content">
             <h1>FIND ME ON</h1>
             <p>
               Feel free to <span className="purple">connect </span>with me
             </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
+            <ul>
+              <li>
                 <a
                   href="https://github.com/SanjayKumar0072"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="social-icons"
                 >
                   <AiFillGithub />
                 </a>
               </li>
 
-              <li className="social-icons">
+              <li>
                 <a
                   href="https://www.linkedin.com/in/sanjay-kumar-397539211/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="social-icons"
                 >
                   <FaLinkedinIn />
                 </a>
