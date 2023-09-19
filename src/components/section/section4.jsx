@@ -4,14 +4,15 @@ import { AiFillGithub, AiOutlineTwitter, AiFillInstagram } from "react-icons/ai"
 import { FaLinkedinIn } from "react-icons/fa";
 
 function FindMe() {
+
   return (
     <Container fluid className="link-section" id="about">
       <Container>
         <Row>
           <Col md={12} className="social-content">
-            <h1>FIND ME ON</h1>
+            <h1>FIND <b>ME</b> ON</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Feel free to <b>connect </b>with me
             </p>
             <ul>
               <li>

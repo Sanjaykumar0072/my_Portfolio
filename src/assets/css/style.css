@@ -6,7 +6,7 @@
 html {
   --section-background-color: linear-gradient(to bottom left, rgba(17, 16, 16, 0.582), rgba(12, 8, 24, 0.904));
   /* --image-gradient: linear-gradient(270deg,#1b1429,#140f23); */
-  --image-gradient: linear-gradient(to bottom right, #ff6f61, #f6d365);
+  --theme-gradient: linear-gradient(to bottom right, #ff6f61, #f6d365);
   --dark-gradient: rgb(17 24 39);
   --imp-text-color: #912d09;
   --imp-dark-text-color: rgb(45 212 191/1);
@@ -16,11 +16,24 @@ body {
   font-family: "Courier New", Courier, monospace;
   position: relative;
   z-index: 0;
-  background: var(--image-gradient);
+  background: var(--theme-gradient);
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px;
   padding-top: 30px;
+  transition: background-color 0.5s ease-out, color 0.3s ease-out;
+}
+
+h1,
+h3 {
+  color: #fff;
+  padding-bottom: 40px;
+  font-weight: bold;
+}
+
+b,
+span {
+  color: var(--imp-text-color);
 }
 
 .dark-mode {
@@ -37,7 +50,9 @@ body {
 .dark-mode .navbar .theme {
   background-color: var(--imp-dark-text-color);
 }
-.dark-mode .color-font, .dark-mode b, .dark-mode span {
+.dark-mode .color-font,
+.dark-mode b,
+.dark-mode span {
   color: var(--imp-dark-text-color) !important;
 }
 .dark-mode svg {
@@ -58,6 +73,11 @@ body {
 .dark-mode .skills .tech-icons {
   border: 1.7px solid var(--imp-dark-text-color);
   box-shadow: 4px 4px 4px 0px rgba(45, 212, 191, 0.52);
+}
+.dark-mode .skills .tech-icons:hover {
+  transform: scale(1.05);
+  border: 2.2px solid var(--imp-dark-text-color);
+  box-shadow: 3px 3px 3px 3px var(--imp-dark-text-color);
 }
 .dark-mode .experience-conatiner .experience-content {
   border: 1.7px solid var(--imp-dark-text-color);
@@ -84,7 +104,7 @@ body {
   box-shadow: 0 0 5px var(--imp-dark-text-color);
   text-shadow: 0 0 2px var(--imp-dark-text-color);
 }
-.dark-mode .scroll {
+.dark-mode .progress-wrap {
   background-color: var(--imp-dark-text-color);
 }
 .dark-mode .footer {
@@ -107,12 +127,12 @@ section,
 /*Scrollbar   */
 /* --------- */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 4px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--image-gradient);
+  background: var(--theme-gradient);
 }
 
 /* Handle */
@@ -129,8 +149,8 @@ section,
 .navbar {
   position: fixed;
   transition: all 0.3s ease-out 0s;
-  padding: 0.5rem 2rem;
-  font-size: 1.2rem;
+  padding: 0.5rem 2rrem;
+  font-size: 1.2rrem;
   transition: all 0.3s ease-out 0s;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
   -webkit-backdrop-filter: blur(15px);
@@ -188,8 +208,8 @@ section,
   font-weight: bold;
 }
 .navbar .logo {
-  height: 1.5em;
-  width: 1.5em;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
 }
 .navbar .nav-item {
@@ -198,7 +218,7 @@ section,
 }
 .navbar .nav-item a {
   color: #fff;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1rrem;
   font-size: 20px;
   font-weight: 400;
   position: relative;
@@ -260,7 +280,7 @@ section,
   padding-top: 80px;
 }
 .home-content .home-header .heading {
-  font-size: 2.4em;
+  font-size: 2.4rem;
 }
 .home-content .home-header .heading .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
@@ -270,19 +290,16 @@ section,
   display: inline-block;
 }
 .home-content .home-header .heading-name {
-  font-size: 2.5em;
+  font-size: 2.5rem;
+  padding: 0 0 15px 0;
 }
 .home-content .home-header .heading-name .main-name {
   color: var(--imp-text-color);
 }
-.home-content .home-header .Typewriter__wrapper {
-  font-size: 2.2em;
+.home-content .home-header .Typewriter {
+  font-size: 1.6rem;
   color: var(--imp-text-color);
-  font-weight: 600;
-}
-.home-content .home-header .Typewriter__cursor {
-  font-size: 2.4em;
-  color: #b562d6;
+  font-weight: bold;
 }
 
 @keyframes wave-animation {
@@ -316,11 +333,13 @@ section,
   position: relative;
   padding-bottom: 70px;
 }
-.home-about-section .myAvtar {
-  justify-content: center;
-  padding-top: 15em;
+.home-about-section .sec2-column {
+  align-items: center;
 }
-.home-about-section .myAvtar .img-fluid {
+.home-about-section .sec2-column .myAvtar {
+  justify-content: center;
+}
+.home-about-section .sec2-column .myAvtar .img-fluid {
   transform: translateX(90px);
 }
 .home-about-section .home-about-description {
@@ -331,29 +350,20 @@ section,
 }
 .home-about-section .home-about-description .home-about-body {
   padding-top: 50px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   text-align: left;
-}
-.home-about-section .home-about-description b,
-.home-about-section .home-about-description span {
-  color: var(--imp-text-color);
 }
 
 /*-------------------section 2-------------------*/
 .skills h1 {
   text-align: center;
-  color: #fff;
-  padding-bottom: 40px;
 }
 .skills .tech-icons {
-  font-size: 4.5em;
+  font-size: 4.5rem;
   margin: 15px;
   padding: 10px;
-  opacity: 0.93;
-  vertical-align: middle;
   text-align: center;
   border-radius: 5px;
-  display: table;
   border: 1.7px solid var(--imp-text-color);
   box-shadow: 4px 4px 4px 0px rgba(145, 45, 9, 0.4588235294);
   overflow: hidden;
@@ -365,6 +375,12 @@ section,
 .skills .tech-icons h2 {
   color: #fff;
 }
+.skills .tech-icons:hover {
+  transform: scale(1.05);
+  border: 2.2px solid rgba(165, 33, 33, 0.3215686275);
+  box-shadow: 4px 4px 5px 5px rgba(145, 45, 9, 0.4588235294);
+}
+
 /*-------------------section 3-------------------*/
 .experience-conatiner h1 {
   text-align: center;
@@ -373,7 +389,7 @@ section,
   padding-top: 70px;
 }
 .experience-conatiner .experience-content {
-  font-size: 4.5em;
+  font-size: 4.5rem;
   margin: 15px;
   padding: 10px;
   opacity: 0.93;
@@ -396,6 +412,7 @@ section,
 }
 .experience-conatiner .experience-content h3 {
   color: var(--imp-text-color);
+  padding: 0;
 }
 .experience-conatiner .experience-content img {
   width: 100px;
@@ -405,7 +422,8 @@ section,
   margin-bottom: 10px;
 }
 .experience-conatiner .experience-content ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 5fr));
   align-items: center;
   justify-content: start;
   flex-wrap: wrap;
@@ -418,7 +436,7 @@ section,
   border: 1.7px solid var(--imp-text-color);
   box-shadow: 4px 4px 4px 0px rgba(145, 45, 9, 0.4588235294);
   border-radius: 5px;
-  padding: 5px 25px;
+  padding: 5px 0;
 }
 
 /*-------------------section 4-------------------*/
@@ -426,6 +444,9 @@ section,
   text-align: center;
   padding: 100px 0;
   color: #fff;
+}
+.link-section .social-content h1 {
+  padding: 0;
 }
 .link-section .social-content ul {
   justify-content: center;
@@ -441,12 +462,14 @@ section,
 }
 .link-section .social-content ul li .social-icons {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   text-align: center;
-  font-size: 1.2em;
-  line-height: 2em;
+  font-size: 1.2rem;
+  line-height: 2rem;
   background: rgba(255, 255, 255, 0.972);
   color: var(--imp-text-color);
   border-radius: 50%;
@@ -475,6 +498,82 @@ section,
   text-shadow: 0 0 2px var(--imp-text-color);
 }
 
+.progress-wrap {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  background-color: var(--imp-text-color);
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 200ms linear;
+}
+.progress-wrap::after {
+  position: absolute;
+  font-family: "unicons";
+  content: "";
+  background: url(/src/assets/images/up-arrow-icon.svg) no-repeat center;
+  background-size: 20px;
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  color: var(--grey);
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  transition: all 200ms linear;
+}
+.progress-wrap:hover::before {
+  opacity: 1;
+}
+.progress-wrap::before {
+  position: absolute;
+  font-family: "unicons";
+  content: "";
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  opacity: 0;
+  background: url(/src/assets/images/up-arrow-icon.svg) no-repeat center;
+  background-size: 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  transition: all 200ms linear;
+}
+.progress-wrap svg path {
+  fill: none;
+}
+.progress-wrap svg.progress-circle path {
+  stroke: #fcfcfc;
+  stroke-width: 4;
+  box-sizing: border-box;
+  transition: all 200ms linear;
+}
+
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 /*-------------------footer-------------------*/
 .footer {
   background-color: var(--imp-text-color);
@@ -489,68 +588,20 @@ section,
   width: 100%;
 }
 .footer .footer-copywright h3 {
-  font-size: 1em;
-  color: white;
+  font-size: 1rem;
+  color: #fcfcfc;
   margin: 0.5em 0;
+  padding: 0;
 }
 .footer .footer-copywright h3 span {
   color: #000;
   font-weight: 700;
 }
 
-/*-------------------resume-------------------*/
-.resume-section {
-  position: relative;
-  padding-top: 110px;
-  padding-bottom: 30px;
-  color: white;
-}
-.resume-section .resume {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  justify-content: center;
-}
-.resume-section .resume .resume-title {
-  font-size: 2em;
-  font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.resume-section .resume .react-pdf__Page__textContent.textLayer {
-  display: none;
-}
-
-/*---------------------ScrollToTop---------------*/
-.scroll {
-  position: fixed;
-  z-index: 3;
-  display: none;
-  bottom: 60px;
-  right: 2%;
-  width: 50px;
-  height: 50px;
-  line-height: 75px;
-  border-radius: 50%;
-  font-size: 17px;
-  color: #fff;
-  background: var(--imp-text-color);
-  padding: 20px;
-  text-align: center;
-  vertical-align: middle;
-  box-shadow: 0px 0px 3px #000;
-}
-.scroll img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-}
-
 /*-------------------Responsive-------------------*/
 @media (max-width: 1199px) {
   .home-content .home-header .Typewriter__wrapper {
-    font-size: 1.8em;
+    font-size: 1.8rem;
   }
   .home-about-section .sec2-column {
     align-items: center;
@@ -559,7 +610,7 @@ section,
     padding: 0;
   }
   .skills .tech-icons {
-    width: 12rem;
+    width: 12rrem;
   }
   .experience-conatiner .experience-content {
     max-width: 85%;
@@ -568,7 +619,7 @@ section,
     max-width: 90%;
   }
   .experience-conatiner .experience-content ul li {
-    padding: 5px 20px;
+    padding: 5px 0px;
   }
 }
 @media (max-width: 1023px) {
@@ -626,7 +677,7 @@ section,
   }
   .navbar .theme {
     position: absolute;
-    right: 5rem;
+    right: 5rrem;
     top: 8px;
   }
   .navbar .theme:hover::after {
@@ -671,7 +722,7 @@ section,
   .experience-conatiner .experience-content ul li,
   .experience-conatiner .experience-content p {
     font-size: 18px;
-    padding: 5px 10px;
+    padding: 5px 0px;
   }
   .link-section .social-content {
     padding: 50px 0;
@@ -688,4 +739,25 @@ section,
   .resume-section .react-pdf__Page__canvas {
     width: 300px;
   }
+}
+/*-------------------resume-------------------*/
+.resume-section {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 30px;
+  color: white;
+}
+.resume-section .resume {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+.resume-section .resume .resume-title {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.resume-section .resume .react-pdf__Page__textContent.textLayer {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

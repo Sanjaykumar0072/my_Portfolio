@@ -1,0 +1,27 @@
+/*-------------------section 1-------------------*/
+.home-about-section {
+    position: relative;
+    padding-bottom: 70px;
+    .sec2-column {
+      align-items: center;
+      .myAvtar {
+        justify-content: center;
+        .img-fluid {
+          transform: translateX(90px);
+        }
+      }
+    }
+  
+    .home-about-description {
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 20px;
+      text-align: center;
+      .home-about-body {
+        padding-top: 50px;
+        font-size: 1.2rem;
+        text-align: left;
+      }
+    }
+  }
+  

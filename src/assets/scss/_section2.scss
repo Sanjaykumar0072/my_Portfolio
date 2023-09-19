@@ -1,0 +1,29 @@
+/*-------------------section 2-------------------*/
+.skills {
+    h1 {
+      text-align: center;
+    }
+    .tech-icons {
+      font-size: 4.5rem;
+      margin: 15px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      border: 1.7px solid var(--imp-text-color);
+        box-shadow: 4px 4px 4px 0px #912d0975;
+      overflow: hidden;
+      transition: all 0.4s ease 0s;
+  
+      svg path {
+        fill: #fff;
+      }
+      h2 {
+        color: #fff;
+      }
+      &:hover {
+        transform: scale(1.05);
+        border: 2.2px solid #a5212152;
+        box-shadow: 4px 4px 5px 5px rgba(145, 45, 9, 0.4588235294);
+      }
+    }
+  }

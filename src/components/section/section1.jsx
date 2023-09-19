@@ -18,39 +18,21 @@ function AboutMe() {
               LET ME <span> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-            I've embarked on a programming journey and acquired the necessary skills to develop websites.
+            I've embarked on an exciting <b>programming journey</b>, acquiring the necessary skills to create cutting-edge websites.
               <br />
-              <br />I've gained practical experience in a range of technologies, including
+              <br />My practical experience spans a wide range of technologies, including
               <i>
-                <b> Html, Css, Sass, JavaScript, WordPress, MongoDb, Expressjs, Nodejs </b> and I've delved into the fundamentals of <b>Vuejs</b>.
+                <b> HTML, CSS, Sass, JavaScript, WordPress, MongoDB, Express.js, Node.js </b>, and and I've even delved into the fundamentals of <b>Vue.js and React.js</b>.
               </i>
               <br />
               <br />
-              I'm enthusiastic about harnessing Node.js and modern JavaScript libraries and frameworks like React.js and Vue.js to develop cutting-edge products. I channel this passion into my work whenever possible and building new
-              <i>
-                <b> Web Technologies and Products </b> and
-                also eager to learn new{" "}
-                <b>
-                  Technologies.
-                </b>
-              </i>
+              My enthusiasm lies in harnessing the power of <b>Node.js</b> and <b>modern JavaScript</b> libraries and frameworks like <b>React.js</b> and <b>Vue.js</b> to develop innovative and forward-thinking products. I pour my <b>passion into my work</b>, constantly striving to push the boundaries of what's possible in web development.
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b>Node.js</b> and
-              <i>
-                <b>
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b> React.js and Vue.js.</b>
-              </i>
+              I'm also eagerly keeping up with the latest <b>technologies</b> and <b>trends</b>, always on the lookout for new tools and techniques to enhance my skills and stay ahead of the curve.
               <br />
               <br />
-              I learn <b> React and Redux</b> for gaining more skills to improve myself.
+              As part of my continuous <b>learning journey</b>, I've recently delved into <b>React</b> and <b>Redux</b> to further expand my skill set and keep myself at the forefront of the rapidly evolving tech landscape. With these tools in my arsenal, I'm ready to take on the <b>challenges</b> and <b>opportunities</b> and beyond have to offer.
             </p>
           </Col>
         </Row>
