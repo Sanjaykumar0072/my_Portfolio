@@ -358,7 +358,12 @@ section,
 .skills h1 {
   text-align: center;
 }
-.skills .tech-icons {
+.skills .tech-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
+  padding: 0;
+}
+.skills .tech-skills .tech-icons {
   font-size: 4.5rem;
   margin: 15px;
   padding: 10px;
@@ -369,13 +374,13 @@ section,
   overflow: hidden;
   transition: all 0.4s ease 0s;
 }
-.skills .tech-icons svg path {
+.skills .tech-skills .tech-icons svg path {
   fill: #fff;
 }
-.skills .tech-icons h2 {
+.skills .tech-skills .tech-icons h2 {
   color: #fff;
 }
-.skills .tech-icons:hover {
+.skills .tech-skills .tech-icons:hover {
   transform: scale(1.05);
   border: 2.2px solid rgba(165, 33, 33, 0.3215686275);
   box-shadow: 4px 4px 5px 5px rgba(145, 45, 9, 0.4588235294);
@@ -621,6 +626,10 @@ section,
   .experience-conatiner .experience-content ul li {
     padding: 5px 0px;
   }
+  .progress-wrap {
+    right: 10px;
+    bottom: 60px;
+  }
 }
 @media (max-width: 1023px) {
   section {
@@ -666,7 +675,7 @@ section,
     font-size: 28px !important;
   }
   .navbar {
-    padding: 5px 10px;
+    padding: 10px;
     font-size: 20px !important;
   }
   .navbar .nav-item a {
@@ -677,8 +686,8 @@ section,
   }
   .navbar .theme {
     position: absolute;
-    right: 5rrem;
-    top: 8px;
+    right: 5rem;
+    top: 5px;
   }
   .navbar .theme:hover::after {
     opacity: 0;
@@ -705,10 +714,10 @@ section,
   .skills h1 {
     padding-bottom: 10px;
   }
-  .skills .tech-icons {
-    margin: 10px 10px 10px 20px;
+  .skills .tech-skills .tech-icons {
     width: 100%;
     max-width: 280px;
+    margin: 10px auto;
   }
   .experience-conatiner h1 {
     padding-bottom: 0;
@@ -738,6 +747,10 @@ section,
   }
   .resume-section .react-pdf__Page__canvas {
     width: 300px;
+  }
+  .footer .footer-copywright h3 {
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 /*-------------------resume-------------------*/

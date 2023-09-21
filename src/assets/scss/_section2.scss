@@ -1,8 +1,12 @@
 /*-------------------section 2-------------------*/
 .skills {
-    h1 {
-      text-align: center;
-    }
+  h1 {
+    text-align: center;
+  }
+  .tech-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
+    padding: 0;
     .tech-icons {
       font-size: 4.5rem;
       margin: 15px;
@@ -10,10 +14,10 @@
       text-align: center;
       border-radius: 5px;
       border: 1.7px solid var(--imp-text-color);
-        box-shadow: 4px 4px 4px 0px #912d0975;
+      box-shadow: 4px 4px 4px 0px #912d0975;
       overflow: hidden;
       transition: all 0.4s ease 0s;
-  
+
       svg path {
         fill: #fff;
       }
@@ -27,3 +31,4 @@
       }
     }
   }
+}
