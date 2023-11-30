@@ -74,14 +74,16 @@ span {
     }
   }
   .skills {
-    .tech-icons {
-      border: 1.7px solid var(--imp-dark-text-color);
-      box-shadow: 4px 4px 4px 0px rgba(45, 212, 191, 0.52);
-
-      &:hover {
-        transform: scale(1.05);
-        border: 2.2px solid var(--imp-dark-text-color);
-        box-shadow: 3px 3px 3px 3px var(--imp-dark-text-color);
+    .tech-skills {
+      .tech-icons {
+        border: 1.7px solid var(--imp-dark-text-color);
+        box-shadow: 4px 4px 4px 0px rgba(45, 212, 191, 0.52);
+  
+        &:hover {
+          transform: scale(1.05);
+          border: 2.2px solid var(--imp-dark-text-color);
+          box-shadow: 3px 3px 3px 3px var(--imp-dark-text-color);
+        }
       }
     }
   }
@@ -140,7 +142,6 @@ section,
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 120px;
-  background: url(../banner-background.png) no-repeat center;
 }
 
 /* --------- */

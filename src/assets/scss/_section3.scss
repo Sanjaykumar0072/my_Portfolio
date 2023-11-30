@@ -41,10 +41,7 @@
       ul {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 5fr));
-        align-items: center;
-        justify-content: start;
-        flex-wrap: wrap;
-        gap: 10px;
+        grid-gap: 10px;
         padding-left: 0;
       }
       ul li {

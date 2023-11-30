@@ -70,11 +70,11 @@ span {
 .dark-mode .navbar .navbar-toggler span {
   background-color: var(--imp-dark-text-color);
 }
-.dark-mode .skills .tech-icons {
+.dark-mode .skills .tech-skills .tech-icons {
   border: 1.7px solid var(--imp-dark-text-color);
   box-shadow: 4px 4px 4px 0px rgba(45, 212, 191, 0.52);
 }
-.dark-mode .skills .tech-icons:hover {
+.dark-mode .skills .tech-skills .tech-icons:hover {
   transform: scale(1.05);
   border: 2.2px solid var(--imp-dark-text-color);
   box-shadow: 3px 3px 3px 3px var(--imp-dark-text-color);
@@ -120,7 +120,6 @@ section,
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 120px;
-  background: url(../banner-background.png) no-repeat center;
 }
 
 /* --------- */
@@ -208,8 +207,8 @@ section,
   font-weight: bold;
 }
 .navbar .logo {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
 }
 .navbar .nav-item {
@@ -349,7 +348,6 @@ section,
   text-align: center;
 }
 .home-about-section .home-about-description .home-about-body {
-  padding-top: 50px;
   font-size: 1.2rem;
   text-align: left;
 }
@@ -360,7 +358,8 @@ section,
 }
 .skills .tech-skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 5fr));
+  grid-gap: 10px;
   padding: 0;
 }
 .skills .tech-skills .tech-icons {
@@ -429,10 +428,7 @@ section,
 .experience-conatiner .experience-content ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 5fr));
-  align-items: center;
-  justify-content: start;
-  flex-wrap: wrap;
-  gap: 10px;
+  grid-gap: 10px;
   padding-left: 0;
 }
 .experience-conatiner .experience-content ul li {
@@ -499,10 +495,27 @@ section,
 }
 .link-section .social-content ul li .social-icons:hover {
   color: var(--imp-text-color);
-  box-shadow: 0 0 5px var(--imp-text-color);
+  box-shadow: 0 0 15px var(--imp-text-color);
   text-shadow: 0 0 2px var(--imp-text-color);
+  animation: none;
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 var(--imp-text-color);
+  }
+  100% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}
+@keyframes pulseDark {
+  0% {
+    box-shadow: 0 0 rgb(45, 212, 191);
+  }
+  100% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}
 .progress-wrap {
   position: fixed;
   right: 50px;
@@ -614,8 +627,12 @@ section,
   .home-about-section .sec2-column .myAvtar {
     padding: 0;
   }
-  .skills .tech-icons {
-    width: 12rrem;
+  .skills .tech-skills {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 5fr));
+  }
+  .skills .tech-skills .tech-icons {
+    width: 100%;
+    margin: 0 auto;
   }
   .experience-conatiner .experience-content {
     max-width: 85%;
@@ -684,10 +701,15 @@ section,
   .navbar .nav-item a::after {
     display: none;
   }
+  .navbar .logo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
   .navbar .theme {
     position: absolute;
     right: 5rem;
-    top: 5px;
+    top: 15px;
   }
   .navbar .theme:hover::after {
     opacity: 0;
@@ -714,10 +736,8 @@ section,
   .skills h1 {
     padding-bottom: 10px;
   }
-  .skills .tech-skills .tech-icons {
-    width: 100%;
-    max-width: 280px;
-    margin: 10px auto;
+  .skills .tech-skills {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 2fr));
   }
   .experience-conatiner h1 {
     padding-bottom: 0;

@@ -31,6 +31,7 @@
           color: var(--imp-text-color);
           border-radius: 50%;
           transition: 0.5s;
+
           &:before {
             content: "";
             position: absolute;
@@ -50,11 +51,29 @@
           }
           &:hover {
             color: var(--imp-text-color);
-            box-shadow: 0 0 5px var(--imp-text-color);
+            box-shadow: 0 0 15px var(--imp-text-color);
             text-shadow: 0 0 2px var(--imp-text-color);
+            animation: none;
           }
         }
       }
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 var(--imp-text-color);
+  }
+  100% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}
+@keyframes pulseDark {
+  0% {
+    box-shadow: 0 0  rgb(45 212 191/1);
+  }
+  100% {
+    box-shadow: 0 0 0 12px transparent;
   }
 }

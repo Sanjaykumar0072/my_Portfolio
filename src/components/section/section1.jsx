@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../assets/images/avatar.svg";
+import myImgDark from '../../assets/images/avatarDark.svg';
 import Tilt from "react-parallax-tilt";
 
 function AboutMe() {
+  const [imgSrc, setImgSrc] = useState(myImg);
+
+  useEffect(() => {
+    const handleBodyClassChange = () => {
+      const body = document.body;
+      if (body.classList.contains("dark-mode")) {
+        setImgSrc(myImgDark);
+      } else {
+        setImgSrc(myImg);
+      }
+    };
+    handleBodyClassChange(); // Initial check
+
+    const observer = new MutationObserver(handleBodyClassChange);
+    observer.observe(document.body, { attributes: true });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row className="sec2-column">
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              
+              <img src={imgSrc} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
           <Col md={8} className="home-about-description">

@@ -77,8 +77,8 @@
       font-weight: bold;
     }
     .logo {
-      height: 1.5rem;
-      width: 1.5rem;
+      height: 4rem;
+      width: 4rem;
       border-radius: 50%;
     }
     .nav-item {
@@ -113,6 +113,10 @@
         }
       }
     }
+
+    // #responsive-navbar-nav {
+    //   height: 100vh;
+    // }
     .theme {
       border-radius: 50%;
       background-color: var(--imp-text-color);

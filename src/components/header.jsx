@@ -14,8 +14,9 @@ import { AiOutlineHome } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
-  const [expand, updateExpanded] = useState(false);
+  const [ expand, updateExpanded ] = useState(false);
   const [ darkMode, setDarkMode ] = useState(false);
+  const [ navbar, updateNavbar ] = useState(false);
   
   useEffect(() => {
     const body = document.body
