@@ -7,7 +7,7 @@ const ExperienceCard = () => {
         <Container className='experience-conatiner' id="expreience">
             <Row className='justify-content-center'>
                 <h1><span>Work </span>Experience</h1>
-                <Col  lg={4} xl={5} md={12}>
+                <Col  lg={4} md={12}>
                     <Row className='justify-content-center'>
                         <Col md={12} className='experience-content'>
                             <img src={blocksera} />
@@ -33,7 +33,7 @@ const ExperienceCard = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col lg={8} xl={7} md={12}>
+                <Col lg={8} md={12}>
                     <Row className='justify-content-center'>
                         <div className="milestones">
                             <div className="ml">
