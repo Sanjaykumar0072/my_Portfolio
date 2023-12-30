@@ -1,35 +1,25 @@
 /*-------------------section 2-------------------*/
-.skills {
-  h1 {
-    text-align: center;
+.home-about-section {
+  position: relative;
+  padding-bottom: 100px;
+  padding-top: 120px;
+  .sec2-column {
+    align-items: center;
+    .myAvtar {
+      justify-content: center;
+      .img-fluid {
+        transform: translateX(90px);
+      }
+    }
   }
-  .tech-skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 5fr));
-    grid-gap: 10px;
-    padding: 0;
-    .tech-icons {
-      font-size: 4.5rem;
-      margin: 15px;
-      padding: 10px;
-      text-align: center;
-      border-radius: 5px;
-      border: 1.7px solid var(--imp-text-color);
-      box-shadow: 4px 4px 4px 0px #912d0975;
-      overflow: hidden;
-      transition: all 0.4s ease 0s;
 
-      svg path {
-        fill: #fff;
-      }
-      h2 {
-        color: #fff;
-      }
-      &:hover {
-        transform: scale(1.05);
-        border: 2.2px solid #a5212152;
-        box-shadow: 4px 4px 5px 5px rgba(145, 45, 9, 0.4588235294);
-      }
+  .home-about-description {
+    color: white;
+    padding-bottom: 20px;
+    text-align: center;
+    .home-about-body {
+      font-size: 1.2rem;
+      text-align: left;
     }
   }
 }

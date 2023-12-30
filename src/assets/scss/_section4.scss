@@ -1,79 +1,127 @@
 /*-------------------section 4-------------------*/
-.link-section {
-  .social-content {
+.experience-conatiner {
+  h1 {
     text-align: center;
-    padding: 100px 0;
     color: #fff;
-    h1 {
-      padding: 0;
-    }
-    ul {
-      justify-content: center;
-      padding-top: 15px;
-      display: inline-block;
-      position: relative;
-      padding-inline-start: 0;
-      li {
-        display: inline-block;
-        padding-right: 15px;
-        padding-left: 15px;
-        .social-icons {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 40px;
-          height: 40px;
-          text-align: center;
-          font-size: 1.2rem;
-          line-height: 2rem;
-          background: rgba(255, 255, 255, 0.972);
-          color: var(--imp-text-color);
-          border-radius: 50%;
-          transition: 0.5s;
+    padding-bottom: 40px;
+    padding-top: 100px;
+  }
+  .milestones {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
 
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: var(--imp-text-color);
-            transition: 0.5s;
-            transform: scale(0.9);
-            z-index: -1;
-          }
-          &:hover:before {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px var(--imp-text-color);
-          }
-          &:hover {
-            color: var(--imp-text-color);
-            box-shadow: 0 0 15px var(--imp-text-color);
-            text-shadow: 0 0 2px var(--imp-text-color);
-            animation: none;
-          }
-        }
+    h2 {
+      color: var(--imp-text-color);
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    h2 span {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-right: 0.1rem;
+    }
+
+    h5 {
+      color: #000;
+      line-height: 0.9;
+      font-weight: bolder;
+      font-size: 1.3rem;
+    }
+  }
+  .cta {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .work-cycle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      opacity: 0.5;
+      z-index: -10;
+      width: 80%;
+      height: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 15px solid #912d0991;
+    }
+
+    .work-card {
+      margin: 15px;
+      padding: 10px;
+      text-align: start;
+      background: rgb(171 66 29);
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 4px 4px 4px 0px rgba(145, 45, 9, 0.7254901961);
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      max-width: 240px;
+      max-height: 240px;
+
+      h3 {
+        padding-bottom: 10px;
+        margin: 0;
       }
     }
   }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 var(--imp-text-color);
-  }
-  100% {
-    box-shadow: 0 0 0 12px transparent;
-  }
-}
-@keyframes pulseDark {
-  0% {
-    box-shadow: 0 0  rgb(45 212 191/1);
-  }
-  100% {
-    box-shadow: 0 0 0 12px transparent;
+  .experience-content {
+    font-size: 4.5rem;
+    margin: 15px;
+    padding: 10px 30px;
+    opacity: 0.93;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 5px;
+    display: table;
+    border: 1.7px solid var(--imp-text-color);
+    box-shadow: 4px 4px 4px 0px #912d0975;
+    overflow: hidden;
+    transition: all 0.4s ease 0s;
+    color: #fff;
+    width: 100%;
+    max-width: 600px;
+    p {
+      font-size: 20px;
+      max-width: 450px;
+      margin: 10px auto;
+    }
+    h3 {
+      color: var(--imp-text-color);
+      padding: 0;
+    }
+    img {
+      width: 100px;
+      border-radius: 50%;
+      background-color: var(--imp-text-color);
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 5fr));
+      grid-gap: 10px;
+      padding-left: 0;
+    }
+    ul li {
+      list-style: none;
+      font-size: 20px;
+      border: 1.7px solid var(--imp-text-color);
+      box-shadow: 4px 4px 4px 0px #912d0975;
+      border-radius: 5px;
+      padding: 5px 0;
+    }
   }
 }

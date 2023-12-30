@@ -1,66 +1,51 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../assets/images/avatar.svg";
-import myImgDark from '../../assets/images/avatarDark.svg';
+import React from "react";
+import { Container, Row, Col, Navbar } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
+import Type from "./type";
+import bannerImg from '../../assets/images/section-banner.png';
 
-function AboutMe() {
-  const [imgSrc, setImgSrc] = useState(myImg);
+export default function Banner() {
+    return (
+        <>
+            <Container fluid className="home-section" id="home">
+                <Container className="home-content">
+                    <Row>
+                        <Col md={7} className="home-header">
+                            <h4 className="role">Web Developer</h4>
+                            <h1 className="heading">
+                                Hi There!{" "}
+                                <span className="wave" role="img" aria-labelledby="wave">
+                                    👋🏻
+                                </span>
+                            </h1>
 
-  useEffect(() => {
-    const handleBodyClassChange = () => {
-      const body = document.body;
-      if (body.classList.contains("dark-mode")) {
-        setImgSrc(myImgDark);
-      } else {
-        setImgSrc(myImg);
-      }
-    };
-    handleBodyClassChange(); // Initial check
+                            <h1 className="heading-name">
+                                I'M
+                                <strong className="main-name color-font"> SANJAY KUMAR</strong>
+                            </h1>
+                            <div className="cta">
+                                <a href="mailto:b.sanjaykumar2000@gmail.com" className="btn">Contact Me</a>
+                                <a href="/resume" className="btn secondary-btn">View CV</a>
+                            </div>
+                            <div className="typewritter">
+                                <Type />
+                            </div>
+                        </Col>
 
-    const observer = new MutationObserver(handleBodyClassChange);
-    observer.observe(document.body, { attributes: true });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  return (
-    <Container fluid className="home-about-section" id="about">
-      <Container>
-        <Row className="sec2-column">
-          <Col md={4} className="myAvtar">
-            <Tilt>
-              
-              <img src={imgSrc} className="img-fluid" alt="avatar" />
-            </Tilt>
-          </Col>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span> INTRODUCE </span> MYSELF
-            </h1>
-            <p className="home-about-body">
-            I've embarked on an exciting <b>programming journey</b>, acquiring the necessary skills to create cutting-edge websites.
-              <br />
-              <br />My practical experience spans a wide range of technologies, including
-              <i>
-                <b> HTML, CSS, Sass, JavaScript, WordPress, MongoDB, Express.js, Node.js </b>, and and I've even delved into the fundamentals of <b>Vue.js and React.js</b>.
-              </i>
-              <br />
-              <br />
-              My enthusiasm lies in harnessing the power of <b>Node.js</b> and <b>modern JavaScript</b> libraries and frameworks like <b>React.js</b> and <b>Vue.js</b> to develop innovative and forward-thinking products. I pour my <b>passion into my work</b>, constantly striving to push the boundaries of what's possible in web development.
-              <br />
-              <br />
-              I'm also eagerly keeping up with the latest <b>technologies</b> and <b>trends</b>, always on the lookout for new tools and techniques to enhance my skills and stay ahead of the curve.
-              <br />
-              <br />
-              As part of my continuous <b>learning journey</b>, I've recently delved into <b>React</b> and <b>Redux</b> to further expand my skill set and keep myself at the forefront of the rapidly evolving tech landscape. With these tools in my arsenal, I'm ready to take on the <b>challenges</b> and <b>opportunities</b> and beyond have to offer.
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
-  );
+                        <Col md={5} style={{ paddingBottom: 20 }}>
+                            <Tilt>
+                                <img src={bannerImg} alt="home pic" className="img-fluid" style={{ maxHeight: "350px" }} />
+                            </Tilt>
+                        </Col>
+                    </Row>
+                </Container>
+                <div class="animation_main_div">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </Container>
+        </>
+    )
 }
-export default AboutMe;

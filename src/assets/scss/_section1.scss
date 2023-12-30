@@ -1,26 +1,210 @@
-/*-------------------section 1-------------------*/
-.home-about-section {
+/*-------------------Section 1-------------------*/
+.home-content {
+    color: whitesmoke;
+    text-align: left;
     position: relative;
-    padding-bottom: 70px;
-    .sec2-column {
-      align-items: center;
-      .myAvtar {
-        justify-content: center;
-        .img-fluid {
-          transform: translateX(90px);
+
+    .home-header {
+        padding-top: 30px;
+        h1 {
+            padding: 0;
         }
-      }
+        .role {
+            text-transform: uppercase;
+            padding-left: 10px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--imp-text-color);
+            border-radius: 0px;
+        }
+        .heading {
+            font-size: 2.2rem;
+            .wave {
+                animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+                animation-duration: 2.1s; /* Change to speed up or slow down */
+                animation-iteration-count: infinite; /* Never stop waving :) */
+                transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+                display: inline-block;
+            }
+        }
+        .heading-name {
+            font-size: 2.2rem;
+            padding: 0 0 15px 0;
+            .main-name {
+                color: var(--imp-text-color);
+                font-size: 3.5rem;
+            }
+        }
+        .Typewriter {
+            font-size: 1.6rem;
+            color: var(--imp-text-color);
+            font-weight: bold;
+        }
     }
-  
-    .home-about-description {
-      color: white;
-      padding-top: 100px;
-      padding-bottom: 20px;
-      text-align: center;
-      .home-about-body {
-        font-size: 1.2rem;
-        text-align: left;
-      }
+}
+.cta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .btn {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        margin-bottom: 20px;
+        border-radius: 17px;
+        background-color: var(--imp-text-color);
+        color: #fff;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #742204;
+        }
     }
-  }
-  
+
+    .btn.secondary-btn {
+        position: relative;
+        background-color: transparent;
+        letter-spacing: 2px;
+        border-bottom: 2.5px solid var(--imp-text-color);
+        border-radius: 0px;
+        padding: 0.15rem 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2.5px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fff;
+            transition: 0.3s ease-in-out;
+        }
+        &:hover::before {
+            width: 100%;
+        }
+    }
+}
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animation_main_div {
+    position: absolute;
+    margin: 0px auto;
+    display: block;
+    width: 200px;
+    right: -10%;
+    top: -3%;
+    z-index: -10;
+    margin-left: 100px;
+    margin-top: 100px;
+    .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #912d09;
+        position: absolute;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation: scaler 4s infinite; /* Chrome, Safari, Opera */
+        -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+        animation: scaler 6s infinite;
+        animation-timing-function: linear;
+
+        &:nth-child(2) {
+            -webkit-animation-delay: 2s;
+        }
+        &:nth-child(3) {
+            -webkit-animation-delay: 4s;
+        }
+        &:nth-child(4) {
+            -webkit-animation-delay: 6s;
+        }
+    }
+}
+
+@-webkit-keyframes scaler {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    33% {
+        -webkit-transform: scale(4);
+        opacity: 0.2;
+    }
+
+    67% {
+        -webkit-transform: scale(7);
+        opacity: 0.1;
+    }
+
+    100% {
+        -webkit-transform: scale(10);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes scaler {
+    0% {
+        -moz-transform: scale(1);
+    }
+
+    33% {
+        -moz-transform: scale(4);
+        opacity: 0.2;
+    }
+
+    67% {
+        -moz-transform: scale(7);
+        opacity: 0.1;
+    }
+
+    100% {
+        -moz-transform: scale(10);
+        opacity: 0;
+    }
+}
+
+@keyframes scaler {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(4);
+        opacity: 0.2;
+    }
+
+    67% {
+        transform: scale(7);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}

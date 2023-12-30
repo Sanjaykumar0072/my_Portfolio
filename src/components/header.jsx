@@ -2,16 +2,13 @@ import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
 import logo from '/src/assets/images/sanjaylogo.png';
 import sun from '/src/assets/images/sun.svg';
 import moon from '/src/assets/images/moon.svg';
 import { AiOutlineHome } from "react-icons/ai";
 
-import { CgFileDocument } from "react-icons/cg";
+import { CgFileDocument, CgUser, CgWorkAlt, CgBolt, CgTikcode,CgWebsite  } from "react-icons/cg";
 
 function NavBar() {
   const [ expand, updateExpanded ] = useState(false);
@@ -34,8 +31,10 @@ function NavBar() {
   function scrollHandler() {
     if (window.scrollY >= 20) {
       updateNavbar(true);
+      document.querySelector('.navbar').classList.remove('noBoxShadow');
     } else {
       updateNavbar(false);
+      document.querySelector('.navbar').classList.add('noBoxShadow');
     }
   }
 
@@ -45,7 +44,7 @@ function NavBar() {
     <Navbar
       expanded={expand} 
       fixed="top"
-      expand="md"
+      expand="lg"
       className="navbar"
     >
       <Container>
@@ -68,6 +67,31 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Nav.Item>
+              <a class="nav-link" href="#about">
+                <CgUser style={{ marginBottom: "2px" }} /> About
+              </a>
+            </Nav.Item>
+            <Nav.Item>
+              <a class="nav-link" href="#skills">
+                <CgBolt style={{ marginBottom: "2px" }} /> skills
+              </a>
+            </Nav.Item>
+            <Nav.Item>
+              <a class="nav-link" href="#expreience">
+                <CgWorkAlt style={{ marginBottom: "2px" }} /> Experience
+              </a>
+            </Nav.Item>
+            <Nav.Item>
+              <a class="nav-link" href="#projects">
+                <CgTikcode style={{ marginBottom: "2px" }} /> Projects
+              </a>
+            </Nav.Item>
+            <Nav.Item>
+              <a class="nav-link" href="#contact">
+                <CgWebsite style={{ marginBottom: "2px" }} /> Contact
+              </a>
+            </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to="/resume"  onClick={() => updateExpanded(false)}>
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
