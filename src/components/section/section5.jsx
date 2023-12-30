@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { CgLoupe } from "react-icons/cg";
 import { CgLink } from "react-icons/cg";
+import portfoliothumbnail from '/src/assets/images/portfolio-screenshot.png';
+import darshiinithumbnail from '/src/assets/images/darshiini-screenshot.png';
+import divtagthumbnail from '/src/assets/images/divtag-screenshot.png';
 
 function Projects() {
 
@@ -14,7 +17,7 @@ function Projects() {
             <div className="projects-gallery">
               <div className="mix prt-card web">
                 <div className="prt-image">
-                  <img src="/src/assets/images/portfolio-screenshot.png" alt="" />
+                  <img src={portfoliothumbnail} alt="" />
                   <div className="prt-overlay">
                     {/* <span className="prt-icon zoom-icon">
                         <CgLoupe />
@@ -32,7 +35,7 @@ function Projects() {
 
               <div className="mix prt-card web">
                 <div className="prt-image">
-                  <img src="/src/assets/images/darshiini-screenshot.png" alt="" />
+                  <img src={darshiinithumbnail} alt="" />
                   <div className="prt-overlay">
                     {/* <span className="prt-icon zoom-icon">
                         <CgLoupe />
@@ -50,7 +53,7 @@ function Projects() {
 
               <div className="mix prt-card web">
                 <div className="prt-image">
-                  <img src="/src/assets/images/divtag-screenshot.png" alt="" />
+                  <img src={divtagthumbnail} alt="" />
                   <div className="prt-overlay">
                     {/* <span className="prt-icon zoom-icon">
                         <CgLoupe />

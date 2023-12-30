@@ -39,11 +39,11 @@ export default function Banner() {
                         </Col>
                     </Row>
                 </Container>
-                <div class="animation_main_div">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                <div className="animation_main_div">
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                    <div className="circle"></div>
                 </div>
             </Container>
         </>

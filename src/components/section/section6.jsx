@@ -14,10 +14,10 @@ export default function Contact() {
                         <h2>Let's <span>Work</span> Together!</h2>
                         <p>I'm passionate about pixel-perfect design! Elevate your brand online with our web development and design solutions. Contact us and let's create wonders.</p>
                         <a href="mailto:b.sanjaykumar2000@gamil.com">b.sanjaykumar2000@gamil.com <ImHeart /></a>
-                        <div class="rings">
-                            <div class="ring"></div>
-                            <div class="ring"></div>
-                            <div class="ring"></div>
+                        <div className="rings">
+                            <div className="ring"></div>
+                            <div className="ring"></div>
+                            <div className="ring"></div>
                         </div>
                     </Col>
                     <Col md={6}>

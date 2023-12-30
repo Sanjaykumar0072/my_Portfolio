@@ -15,8 +15,8 @@ function Footer() {
           </Col>
         </Row>
       </Container>
-      <div class="area" >
-                <ul class="rectangles">
+      <div className="area" >
+                <ul className="rectangles">
                     <li></li>
                     <li></li>
                     <li></li>
