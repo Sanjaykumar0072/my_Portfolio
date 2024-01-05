@@ -68,27 +68,27 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <a className="nav-link" href="#about">
+              <a className="nav-link" href="/#about">
                 <CgUser style={{ marginBottom: "2px" }} /> About
               </a>
             </Nav.Item>
             <Nav.Item>
-              <a className="nav-link" href="#skills">
+              <a className="nav-link" href="/#skills">
                 <CgBolt style={{ marginBottom: "2px" }} /> skills
               </a>
             </Nav.Item>
             <Nav.Item>
-              <a className="nav-link" href="#expreience">
+              <a className="nav-link" href="/#expreience">
                 <CgWorkAlt style={{ marginBottom: "2px" }} /> Experience
               </a>
             </Nav.Item>
             <Nav.Item>
-              <a className="nav-link" href="#projects">
+              <a className="nav-link" href="/#projects">
                 <CgTikcode style={{ marginBottom: "2px" }} /> Projects
               </a>
             </Nav.Item>
             <Nav.Item>
-              <a className="nav-link" href="#contact">
+              <a className="nav-link" href="/#contact">
                 <CgWebsite style={{ marginBottom: "2px" }} /> Contact
               </a>
             </Nav.Item>

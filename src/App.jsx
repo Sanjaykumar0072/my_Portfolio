@@ -1,7 +1,7 @@
 import { useState , useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import Home from './components/section/home';
-import Resume from './components/resume/resumeNew';
+import Home from './components/home';
+import Resume from './components/resumePage';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/assets/css/style.css";

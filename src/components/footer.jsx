@@ -5,6 +5,11 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 
 function Footer() {
+  const rectangles = [];
+
+  for (let i = 0; i < 20; i++) {
+    rectangles.push(<li key={i}></li>);
+  }
 
   return (
     <>
@@ -17,16 +22,7 @@ function Footer() {
       </Container>
       <div className="area" >
                 <ul className="rectangles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    {rectangles}
                 </ul>
             </div >
     </>
