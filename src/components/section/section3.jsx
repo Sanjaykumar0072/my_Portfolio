@@ -14,6 +14,7 @@ import {
     DiMongodb,
     DiGithubBadge,
 } from "react-icons/di";
+import { GrGraphQl } from "react-icons/gr";
 
 function Techstack() {
     return (
@@ -70,6 +71,10 @@ function Techstack() {
                             <li className="tech-icons">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="1em" height="1em"><path d="M 3 6 L 16 28 L 29 6 L 19 6 L 16 11.300781 L 13 6 L 3 6 z M 6.5 8 L 10.271484 8 L 16 18 L 21.728516 8 L 25.5 8 L 16 24.099609 L 6.5 8 z" /></svg>
                                 <h2>Vue</h2>
+                            </li>
+                            <li className="tech-icons">
+                                <GrGraphQl />
+                                <h2>GraphQl</h2>
                             </li>
                             <li className="tech-icons">
                                 <DiGithubBadge />

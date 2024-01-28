@@ -74,8 +74,8 @@ class ContactForm extends Component {
                 <form className="contact-form">
                     <h2>Send me a message</h2>
                     <div className="inputs">
-                    <input ref={this.inputRefs[0]} type="text" placeholder="Enter your Sweet name" name="name" size="30" required />
-                    <input ref={this.inputRefs[1]} type="email" placeholder="abc@gmail.com" name="email" size="30" required />
+                    <input ref={this.inputRefs[0]} type="text" placeholder="Name" name="name" size="30" required />
+                    <input ref={this.inputRefs[1]} type="email" placeholder="abc@xxx.com" name="email" size="30" required />
                     <textarea ref={this.inputRefs[2]} name="message" id="" cols="30" rows="6" placeholder="Project Details🌟"></textarea>
                     </div>
                     <button

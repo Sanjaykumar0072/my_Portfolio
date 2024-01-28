@@ -755,27 +755,16 @@ section,
 .projects-section h1 {
   text-align: center;
 }
-.projects-section .projects-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
 .projects-section .projects-gallery .prt-card {
   border-radius: 15px;
   overflow: hidden;
   background-color: #fff;
-  height: 265px;
-  display: grid;
-  grid-template-rows: 1fr auto;
+  margin: 10px;
   transition: 0.3s ease;
   box-shadow: 4px 4px 4px 0px rgba(145, 45, 9, 0.4588235294);
 }
 .projects-section .projects-gallery .prt-card .prt-image {
   position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 }
 .projects-section .projects-gallery .prt-card .prt-image img {

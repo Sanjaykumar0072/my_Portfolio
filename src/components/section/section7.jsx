@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { AiFillCodepenCircle } from "react-icons/ai";
 
 function FindMe() {
   const [socialIconStyle, setsocialIconStyle] = useState({
@@ -44,7 +45,7 @@ function FindMe() {
             <ul>
               <li>
                 <a
-                  href="https://github.com/SanjayKumar0072"
+                  href="https://github.com/SanjayKumar0072/"
                   target="_blank"
                   rel="noreferrer"
                   className="social-icons"
@@ -62,6 +63,17 @@ function FindMe() {
                   style={socialIconStyle}
                 >
                   <FaLinkedinIn />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://codepen.io/sanjaykumar0072/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="social-icons"
+                  style={socialIconStyle}
+                >
+                  <AiFillCodepenCircle />
                 </a>
               </li>
             </ul>
