@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private/
 Disallow: /secret-page.html
 Allow: /sitemap.xml
-Sitemap: https://darshiinivs.com/sitemap.xml
+Sitemap: https://sanjaykumar0072.netlify.app/sitemap.xml
