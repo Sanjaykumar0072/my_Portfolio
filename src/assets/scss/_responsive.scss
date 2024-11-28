@@ -141,7 +141,7 @@
     }
   }
   .home-content {
-    padding-top: 5rem;
+    padding-top: 4rem;
     .img-fluid {
       padding-top: 10px;
     }
@@ -164,6 +164,9 @@
       .Typewriter__cursor {
         display: none;
       }
+    }
+    .slidingTextContainer {
+      bottom: 25rem;
     }
   }
   .animation_main_div {

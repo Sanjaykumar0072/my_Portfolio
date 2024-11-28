@@ -4,7 +4,7 @@
     text-align: center;
     color: #fff;
     padding-bottom: 40px;
-    padding-top: 100px;
+    padding-top: 20px;
   }
   .milestones {
     display: grid;
@@ -114,14 +114,15 @@
       grid-template-columns: repeat(auto-fit, minmax(150px, 5fr));
       grid-gap: 10px;
       padding-left: 0;
-    }
-    ul li {
-      list-style: none;
-      font-size: 20px;
-      border: 1.7px solid var(--imp-text-color);
-      box-shadow: 4px 4px 4px 0px #912d0975;
-      border-radius: 5px;
-      padding: 5px 0;
+
+      li {
+        list-style: none;
+        font-size: 20px;
+        border: 1.7px solid var(--imp-text-color);
+        box-shadow: 4px 4px 4px 0px #912d0975;
+        border-radius: 5px;
+        padding: 5px 0;
+      }
     }
   }
 }

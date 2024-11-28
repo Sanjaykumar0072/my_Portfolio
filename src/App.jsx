@@ -5,6 +5,7 @@ import Resume from './components/resumePage';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/assets/css/style.css";
+import Cursor from './components/cursor';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <Router>
+      <Cursor />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Routes>
           <Route path="/" element={<Home />} />

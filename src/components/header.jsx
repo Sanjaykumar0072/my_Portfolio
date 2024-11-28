@@ -29,12 +29,12 @@ function NavBar() {
   }, [darkMode]);
 
   function scrollHandler() {
-    if (window.scrollY >= 20) {
+    if (window.scrollY <= 50) {
       updateNavbar(true);
-      document.querySelector('.navbar').classList.remove('noBoxShadow');
+      document.querySelector('.navbar').classList.remove('navBoxShadow');
     } else {
       updateNavbar(false);
-      document.querySelector('.navbar').classList.add('noBoxShadow');
+      document.querySelector('.navbar').classList.add('navBoxShadow');
     }
   }
 
@@ -48,7 +48,7 @@ function NavBar() {
       className="navbar"
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex"><img className="logo" src={logo} alt="" /></Navbar.Brand>
+        <Navbar.Brand href="/" aria-label="Logo" className="d-flex"><img className="logo" src={logo} alt="Logo" /></Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -100,7 +100,7 @@ function NavBar() {
           </Nav>
         </Navbar.Collapse>
         <div className="theme" onClick={() => darkMode === false ? setDarkMode(true) : setDarkMode(false)}>
-          <img src={darkMode === false ? sun : moon} />
+        <img src={darkMode === false ? sun : moon} alt={darkMode === false ? "sun" : "moon"} />
         </div>
       </Container>
     </Navbar>

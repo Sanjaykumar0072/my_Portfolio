@@ -19,11 +19,10 @@ body {
   position: relative;
   z-index: 0;
   overflow-x: hidden;
+  cursor: none;
   background: var(--theme-gradient);
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px;
-  padding-top: 30px;
   transition:
     background-color 0.5s ease-out,
     color 0.3s ease-out;
@@ -37,6 +36,7 @@ h3 {
 a {
   outline: none;
   text-decoration: none;
+  cursor: none;
 }
 b,
 span {
@@ -46,6 +46,10 @@ span {
   background: rgb(17 24 39);
   color: var(--imp-dark-text-color);
 
+  #cursor-dot {
+    border: 2px solid var(--imp-dark-text-color);
+  }
+
   &::-webkit-scrollbar-track {
     background: rgb(16 30 60);
   }
@@ -53,7 +57,7 @@ span {
   &::-webkit-scrollbar-thumb {
     background: var(--imp-dark-text-color);
   }
-  .navbar .theme {
+  .theme-container .theme {
     background-color: var(--imp-dark-text-color);
   }
   .color-font,
@@ -80,8 +84,19 @@ span {
       background-color: var(--imp-dark-text-color);
     }
   }
-  .home-content .home-header .role, .contact .role {
+  .sidebar {
+    .bg {
+      .links a {
+        color: var(--imp-dark-text-color);
+      }
+    }
+  }
+  .home-content .home-header .role,
+  .contact .role {
     border-left-color: var(--imp-dark-text-color);
+  }
+  .home-content .slidingTextContainer {
+    color: #ffffff08;
   }
   .cta {
     a {
@@ -116,13 +131,13 @@ span {
   }
   .box {
     .wave {
-      background: rgba(2, 182, 247, 0.755);      
+      background: rgba(2, 182, 247, 0.755);
     }
     .wave.-two {
-      background: rgb(21, 210, 112);      
+      background: rgb(21, 210, 112);
     }
     .wave.-three {
-      background: var(--imp-dark-text-color);        
+      background: var(--imp-dark-text-color);
     }
   }
   .experience-conatiner {
@@ -175,7 +190,8 @@ span {
     box-shadow: 0px 0px 15px 8px rgba(45, 212, 191, 0.52);
 
     .inputs {
-      input, textarea {
+      input,
+      textarea {
         box-shadow: 0px 0px 5px 2px rgba(45, 212, 191, 0.52);
         background: rgb(5 87 76 / 51%);
 
@@ -186,11 +202,11 @@ span {
     }
     .btn {
       background: var(--imp-dark-text-color);
+
       &:hover {
         background: rgb(5 87 76 / 51%);
       }
     }
-
   }
   .rings {
     .ring {
@@ -241,7 +257,7 @@ section,
 .resume {
   max-width: 1300px;
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 /* --------- */
@@ -262,4 +278,107 @@ section,
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(222, 130, 235, 0.911);
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+:root {
+  --color-cursor: 220, 90, 90;
+  --cursor-outline-shade: 0.3;
+  --cursor-size: 25px;
+  --cursor-outline-size: 12px;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--imp-text-color);
+  position: fixed;
+  z-index: 999;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+#cursor-dot {
+  z-index: 1050;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+}
+
+#cursor-dot {
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  background-color: transparent;
+  border: 2px solid var(--imp-text-color);
+}
+
+.theme-container {
+  position: relative;
+  width: 100%;
+  .theme {
+    border-radius: 50%;
+    background-color: var(--imp-text-color);
+    padding: 10px;
+    margin-left: 20px;
+    position: absolute;
+    right: 2rem;
+    top: -78px;
+
+    &:after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      padding: 7px;
+      box-shadow: 0 0 0 2px #fff;
+      transition:
+        transform 0.4s,
+        opacity 0.2s;
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    &:hover:after {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+.align-center {
+  align-items: center !important;
 }

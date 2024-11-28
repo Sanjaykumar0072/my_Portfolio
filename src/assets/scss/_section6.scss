@@ -2,7 +2,7 @@
 
 .contact {
     position: relative;
-    padding-top: 100px;
+    padding-top: 20px;
     color: #fff;
     .role {
         text-transform: uppercase;
@@ -97,8 +97,8 @@ $border-color_1: rgb(150, 150, 200);
         text-transform: capitalize;
         border: none;
         outline: none;
+        cursor: none;
         font-family: inherit;
-        cursor: pointer;
         transition: 0.3s ease-in;
 
         &:hover {

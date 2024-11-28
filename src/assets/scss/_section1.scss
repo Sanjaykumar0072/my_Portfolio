@@ -40,6 +40,16 @@
             font-weight: bold;
         }
     }
+    .slidingTextContainer {
+        position: absolute;
+        font-size: 40vh;
+        bottom: -16rem;
+        z-index: -5;
+        white-space: nowrap;
+        color: #ffffff17;
+        width: 50%;
+        font-weight: bold;
+    }
 }
 .cta {
     display: flex;
@@ -54,8 +64,8 @@
         background-color: var(--imp-text-color);
         color: #fff;
         font-size: 17px;
-        cursor: pointer;
         transition: 0.3s;
+        cursor: none;
 
         &:hover {
             background-color: #742204;
@@ -117,7 +127,7 @@
     margin: 0px auto;
     display: block;
     width: 200px;
-    right: -10%;
+    left: -10%;
     top: -3%;
     z-index: -10;
     margin-left: 100px;

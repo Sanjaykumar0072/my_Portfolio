@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import blocksera from '/src/assets/images/blocksera.png';
 
@@ -10,7 +9,7 @@ const ExperienceCard = () => {
                 <Col  lg={4} md={12}>
                     <Row className='justify-content-center'>
                         <Col md={12} className='experience-content'>
-                            <img src={blocksera} />
+                            <img src={blocksera} alt="blocksera Technologies" />
                             <h3>Blocksera Technologies</h3>
                             <h4>Software Associate</h4>
                             <p>April 2022 - April 2023</p>
@@ -45,7 +44,7 @@ const ExperienceCard = () => {
                                 <h5>Projects</h5>
                             </div>
                             <div className="ml">
-                                <h2 className="number"><span data-target="00">1</span>+</h2>
+                                <h2 className="number"><span data-target="00">2</span>+</h2>
                                 <h5>Clients</h5>
                             </div>
                         </div>

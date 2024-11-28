@@ -1,13 +1,42 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { CgLoupe } from "react-icons/cg";
+// import { CgLoupe } from "react-icons/cg";
 import { CgLink } from "react-icons/cg";
 import Slider from "react-slick";
+// import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import portfoliothumbnail from '/src/assets/images/portfolio-screenshot.png';
 import darshiinithumbnail from '/src/assets/images/darshiini-screenshot.png';
 import divtagthumbnail from '/src/assets/images/divtag-screenshot.png';
+import naturalfitnezzthumbnail from '/src/assets/images/naturalfitnezz-screenshot.png';
 
-function Projects() {
+const items = [
+  {
+    id: 1,
+    title: "Portfolio",
+    img: portfoliothumbnail,
+    link: "#"
+  },
+  {
+    id: 2,
+    title: "Bharathanatyam Website",
+    img: darshiinithumbnail,
+    link: "http://darshiinivs.com/"
+  },
+  {
+    id: 3,
+    title: "Divtag",
+    img: divtagthumbnail,
+    link: "https://divtag.io/"
+  },
+  {
+    id: 4,
+    title: "Natural Fitnezz",
+    img: naturalfitnezzthumbnail,
+    link: "https://naturalfitnezz.com"
+  }
+];
+
+export default function Projects() {
 
   var settings = {
     lazyLoad: 'ondemand',
@@ -53,65 +82,26 @@ function Projects() {
     <Container fluid className="projects-section" id="projects">
       <Container>
         <Row>
-          <h1><span>Latest </span>Projects</h1>
+          <h1><span>Featured </span>Works</h1>
           <Col md={12} className="projects-gallery">
             <Slider {...settings}>
-              <div>
-                <div className="prt-card">
-                  <div className="prt-image">
-                    <img src={portfoliothumbnail} alt="" />
-                    <div className="prt-overlay">
-                      {/* <span className="prt-icon zoom-icon">
-                        <CgLoupe />
-                      </span> */}
-                      <a href="#" className="prt-icon">
-                        <CgLink />
-                      </a>
+              {items.map((item, index) => (
+                <div key={index}>
+                  <div className="prt-card" key={index}>
+                    <div className="prt-image">
+                      <img src={item.img} alt="portfoliothumbnail" />
+                      <div className="prt-overlay">
+                        <a rel="noreferrer" target="_blank" href={item.link} className="prt-icon">
+                          <CgLink />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="prt-desc">
+                      <h3>{item.title}</h3>
                     </div>
                   </div>
-                  <div className="prt-desc">
-                    <h3>Portfolio </h3>
-                  </div>
                 </div>
-              </div>
-              <div>
-                <div className="prt-card">
-                  <div className="prt-image">
-                    <img src={darshiinithumbnail} alt="" />
-                    <div className="prt-overlay">
-                      {/* <span className="prt-icon zoom-icon">
-                        <CgLoupe />
-                      </span> */}
-                      <a href="https://darshiinivsdance.web.app/" target="_blank" className="prt-icon">
-                        <CgLink />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="prt-desc">
-                    <h3>Bharathanatiyam static Page</h3>
-                    {/* <a href="" className="btn secondary-btn sm">Read more</a> */}
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="prt-card">
-                  <div className="prt-image">
-                    <img src={divtagthumbnail} alt="" />
-                    <div className="prt-overlay">
-                      {/* <span className="prt-icon zoom-icon">
-                        <CgLoupe />
-                      </span> */}
-                      <a href="https://divatg.io/" target="_blank" className="prt-icon">
-                        <CgLink />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="prt-desc">
-                    <h3>Bharathanatiyam static Page</h3>
-                    {/* <a href="" className="btn secondary-btn sm">Read more</a> */}
-                  </div>
-                </div>
-              </div>
+              ))}
             </Slider>
           </Col>
           <div className="cta">
@@ -123,4 +113,3 @@ function Projects() {
     </Container>
   );
 }
-export default Projects;
