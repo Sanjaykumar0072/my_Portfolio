@@ -2,7 +2,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
 import Type from "./type";
 import bannerImg1 from '../../assets/images/logo3.png';
+import bannerImg2 from '../../assets/images/logobannerdark1.png';
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+
 
 const textVariants = {
     initial: {
@@ -37,12 +40,29 @@ const sliderVariants = {
         transition: {
             repeat: Infinity,
             repeatType: "mirror",
-            duration: 30,
+            duration: 50,
         },
     },
 };
 
 export default function Banner() {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        const updateMode = () => {
+            setIsDarkMode(document.body.className.includes("dark"));
+        };
+
+        // Update the mode initially and on class changes
+        updateMode();
+
+        // Optional: Use a MutationObserver if the body class changes dynamically
+        const observer = new MutationObserver(updateMode);
+        observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             <Container fluid className="home-section" id="home">
@@ -64,8 +84,8 @@ export default function Banner() {
                                 </motion.h1>
 
                                 <motion.h1 variants={textVariants} className="heading-name">
-                                    I'M
-                                    <strong variants={textVariants} className="main-name color-font"> SANJAY KUMAR</strong>
+                                    I&apos;M
+                                    <strong className="main-name color-font"> SANJAY KUMAR</strong>
                                 </motion.h1>
                                 <motion.div variants={textVariants} className="cta">
                                     <a href="mailto:b.sanjaykumar2000@gmail.com" className="btn">Contact Me</a>
@@ -87,7 +107,7 @@ export default function Banner() {
 
                         <Col md={5} style={{ paddingBottom: 20 }}>
                             <Tilt>
-                                <img src={bannerImg1} alt="home pic" className="img-fluid" style={{ maxHeight: "450px" }} />
+                                <img src={isDarkMode ? bannerImg2 : bannerImg1} alt="home pic" className="img-fluid" style={{ maxWidth: "400px" }} />
                             </Tilt>
                         </Col>
                     </Row>

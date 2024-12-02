@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Links from "./links/Links";
 import ToggleButton from "./toggleButton/ToggleButton";
+import PropTypes from 'prop-types';
+
 
 const variants = {
   open: {
@@ -43,6 +45,17 @@ const Sidebar = ({ scrollToSection, bannerRef, aboutMeRef, skillsRef, experience
     </motion.div>
     </>
   );
+};
+
+Sidebar.propTypes = {
+  scrollToSection: PropTypes.func.isRequired,
+  bannerRef: PropTypes.object,
+  aboutMeRef: PropTypes.object,
+  skillsRef: PropTypes.object,
+  experienceRef: PropTypes.object,
+  projectsRef: PropTypes.object,
+  contactRef: PropTypes.object,
+  findMeRef: PropTypes.object,
 };
 
 export default Sidebar;

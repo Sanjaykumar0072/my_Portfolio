@@ -14,7 +14,7 @@ const items = [
     id: 1,
     title: "Portfolio",
     img: portfoliothumbnail,
-    link: "#"
+    link: "/"
   },
   {
     id: 2,

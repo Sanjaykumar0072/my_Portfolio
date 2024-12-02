@@ -1,5 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
+import PropTypes from 'prop-types';
+
 
 const variants = {
   open: {
@@ -40,7 +41,7 @@ const Links = ({ scrollToSection, bannerRef, aboutMeRef, skillsRef, experienceRe
     <motion.div className="links" variants={variants}>
       {items.map((item, index) => (
         <motion.a
-          href={ item.label === "Home" ? "/" : item.label === "Resume" ? item.label : `#${item.label}`}
+          href={ item.label === "Home" ? "/" : item.label === "Resume" ? (item.label).toLowerCase() : `#${(item.label).toLowerCase()}`}
           onClick={() => scrollToSection(item.ref)}
           key={index}
           variants={itemVariants}
@@ -52,6 +53,17 @@ const Links = ({ scrollToSection, bannerRef, aboutMeRef, skillsRef, experienceRe
       ))}
     </motion.div>
   );
+};
+
+Links.propTypes = {
+  scrollToSection: PropTypes.func.isRequired,
+  bannerRef: PropTypes.object,
+  aboutMeRef: PropTypes.object,
+  skillsRef: PropTypes.object,
+  experienceRef: PropTypes.object,
+  projectsRef: PropTypes.object,
+  contactRef: PropTypes.object,
+  findMeRef: PropTypes.object,
 };
 
 export default Links;
