@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Links from "./links/Links";
 import ToggleButton from "./toggleButton/ToggleButton";
 import PropTypes from 'prop-types';
-
 
 const variants = {
   open: {
@@ -23,26 +22,46 @@ const variants = {
     },
   },
 };
+
 const Sidebar = ({ scrollToSection, bannerRef, aboutMeRef, skillsRef, experienceRef, projectsRef, contactRef, findMeRef }) => {
   const [open, setOpen] = useState(false);
+  const sidebarRef = useRef(null);
+
+  // Close sidebar when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
-    <motion.div className="sidebar" animate={open ? "open" : "closed"}>
-      <motion.div className="bg" variants={variants}>
-      <Links
-        scrollToSection={scrollToSection}
-        bannerRef={bannerRef}
-        aboutMeRef={aboutMeRef}
-        skillsRef={skillsRef}
-        experienceRef={experienceRef}
-        projectsRef={projectsRef}
-        contactRef={contactRef}
-        findMeRef={findMeRef}
-      />
+      <motion.div
+        ref={sidebarRef}
+        className="sidebar"
+        animate={open ? "open" : "closed"}
+      >
+        <motion.div className="bg" variants={variants}>
+          <Links
+            scrollToSection={scrollToSection}
+            bannerRef={bannerRef}
+            aboutMeRef={aboutMeRef}
+            skillsRef={skillsRef}
+            experienceRef={experienceRef}
+            projectsRef={projectsRef}
+            contactRef={contactRef}
+            findMeRef={findMeRef}
+          />
+        </motion.div>
+        <ToggleButton setOpen={setOpen} />
       </motion.div>
-      <ToggleButton setOpen={setOpen} />
-    </motion.div>
     </>
   );
 };
