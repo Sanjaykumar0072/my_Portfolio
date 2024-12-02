@@ -11,7 +11,10 @@ export default defineConfig({
       writeBundle() {
         fs.copySync('sitemap.xml', 'dist/sitemap.xml');
         fs.copySync('robots.txt', 'dist/robots.txt');
+        fs.copySync('_redirects', 'dist/_redirects');
+        fs.copySync('netlify.toml', 'dist/netlify.toml');
       },
     },
   ],
+  base: '/'
 });
